@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'arial unicode';
+    src: url(fontes/arial-unicode-ms.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* MENU */
+
+#home-icon {
+    position: absolute;
+    margin: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+.menu li{
+    font: 'arial unicode';
+    color: black;
+    padding: 20px;
+    display: flex;
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+}
+
+#logo{
+    width: 300px;
+    position: absolute;
+}
