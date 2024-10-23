@@ -5,12 +5,51 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url(fontes/BAHNSCHRIFT.TTF);
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+p {
+    font-family: 'arial unicode';
+    font-size: 30px;
+  
+}
+
+h1{
+    font-family: 'Bahnschrift';
+    font-size: 40px;
+   
+}
+
+h2{
+    font-family: 'Bahnschrift';
+    font-size: 40px;
+   
+}
+
+.header-section {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    border-top: 2px solid rgb(177, 177, 177);
+    text-align: center;
+}
+
+.header-section h1 {
+    color: black;
+    padding-top: 100px;
+    font-size: 50px;
+
+}
 
 /* MENU */
 
@@ -33,21 +72,178 @@
 }
 
 .menu li{
-    font: 'arial unicode';
+    font-family: 'Bahnschrift';
     color: black;
-    padding: 20px;
+    padding: 15px 30px 15px 30px;
     display: flex;
     font-size: 15pt;
     cursor: pointer;
+    border-radius: 40px;
+}
+
+.menu li:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.menu li:not(:hover){
+    transition: 0.5s;
 }
 
 /* HEADER */
 
 header{
     width: 100%;
+    height: 100px;
 }
 
-#logo{
+#logo-lateral{
     width: 300px;
     position: absolute;
+    margin-left: 100px;
+}
+
+/* HOME */
+
+#home {
+    width: 100%;
+    height: 650px;
+    background-color: #005C53;
+    position: relative;
+}
+
+
+#foto-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#foto-01{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+}
+
+/* CONTEUDO HOME */
+
+#conteudo-home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 650px;
+    z-index: 2;
+    text-align: center;
+}
+
+#conteudo-home p {
+    color: white;
+}
+
+#conteudo-home h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.botao {
+    height: 50px;
+    width: 300px;
+    background-color: #73d31a;
+    color: white;
+    border-radius: 30px; 
+    cursor: pointer;
+    margin: 20px auto;
+    padding: 10px auto;
+    display: flex;           
+    justify-content: center;
+    align-items: center; 
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao:hover {
+    background-color: #2b5306;
+    transition: 0.2s;
+}
+
+.botao:not(:hover) {
+    transition: 0.2s;
+}
+
+.botao h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* SOBRE NOS */
+
+#sobre {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#texto-sobre {
+    padding-left: 100px;
+    margin-top: 20px;
+    grid-column: 1;
+}
+
+#texto-sobre p {
+    font-size: 25px;
+}
+
+
+#logo-principal-container {
+    grid-column: 2;
+    display: flex;
+    justify-content: center; 
+ 
+}
+
+#logo-principal {
+    max-width: 60%;
+    max-height: 60%; 
+}
+
+/* MARCADOR */
+
+#section-marcador {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+#marcador {
+    width: 90%;
+    height: 700px;
+    background-color: #5E4A33;
+    margin: auto;
+    border-radius: 30px;
+}
+
+/* ORÇAMENTO */
+
+
+
+/* CONTATATE-NOS */
+
+#contato {
+    width: 100%;
+    background-color: #005C53;
+    height: 600px;
+    padding-top: 70px;
+
+}
+
+#contato h1 {
+    text-align: center;
+    color: white;
 }
