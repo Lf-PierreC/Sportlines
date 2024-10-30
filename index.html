@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Sportlines</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,11 +15,11 @@
         </div>
         <nav class="navbar">
             <ul class="menu">
-                <li>HOME</li>
-                <li>SOBRE NÓS</li>
-                <li>MARCADOR DE CAMPO</li>
-                <li>ORÇAMENTO</li>
-                <li>CONTATE-NOS</li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                <li><a href="#marcador">MARCADOR DE CAMPO</a></li>
+                <li><a href="#orcamento">ORÇAMENTO</a></li>
+                <li><a href="#contato">CONTATE-NOS</a></li>
             </ul>
         </nav>
     </header>
@@ -26,15 +27,15 @@
         <div id="conteudo-home">
         <p>O melhor marcador de campo elétrico disponível no mercado, com o melhor preço.</p>
         <h1>Clique aqui e faça seu orçamento!</h1>
-        <div class="botao"><h2>ORÇAMENTO</h2></div>
+        <div class="botao"><a id="a-botao" href="#orcamento"><h2>ORÇAMENTO</h2></a></div>
         </div>
         <div id="foto-home">
-            <img id="foto-01" src="imagens/gramado.jpg" alt="gramado">
+            <img id="foto-01" src="imagens/foto-fundo.jpg" alt="gramado">
         </div>
     </div>
 
 
-    <div class="header-section">
+    <div class="header-section" id="sobre-nos">
         <h1>SOBRE NÓS</h1>
     </div>
     <div id="sobre">
@@ -47,23 +48,114 @@
             <img id="logo-principal" src="imagens/SportlinesLOGO-01.png" alt="Sportlines">
         </div>
     </div>
-    <div class="header-section">
-        <h1>MARCADOR DE CAMPO</h1>
-    </div>
     <div id="section-marcador">
-        <div id="marcador">
-
+        <div class="header-section" id="marcador">
+        <h1>MARCADOR DE CAMPO</h1>
+        </div>
+        
+        <div id="carousel-marcador">
+            <img class="foto" src="imagens/foto-01.jpg" alt="marcador" onclick="abrirModal(this)">
+            <img class="foto" src="imagens/foto-02.jpg" alt="marcador" onclick="abrirModal(this)">
+            <img class="foto" src="imagens/foto-03.jpg" alt="marcador" onclick="abrirModal(this)">
+            <img class="foto" src="imagens/foto-04.jpg" alt="marcador" onclick="abrirModal(this)">
+            <img class="foto" src="imagens/foto-05.jpg" alt="marcador" onclick="abrirModal(this)">
+        </div>
+        
+        <div id="modal" class="modal">
+            <span class="close" onclick="fecharModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
+                  </svg>
+            </span>
+            <div class="seta-esquerda" onclick="mudarImagem(-1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+                </svg>
+            </div>
+            <img id="modalImage" src="">
+            <div class="seta-direita" onclick="mudarImagem(1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+                </svg>
+            </div>           
+        </div>
+        <div id="descricao">
+            <p>Carrinho Manual para Marcação de Linha a Tinta – Padrão FIFA: ideal para quem busca marcar campos com qualidade profissional! Com estrutura robusta em aço e pneus com câmara, ele facilita o transporte e garante durabilidade. Seu tanque com capacidade de 20 litros permite longas sessões de marcação sem interrupções, e o ajuste de saída de tinta entre 10 e 12 cm garante precisão e uniformidade na demarcação. Seja para jogos amadores ou profissionais, esse carrinho oferece praticidade e resultados que impressionam. Aposte em um produto que combina eficiência, resistência e padrão oficial para elevar a qualidade do seu campo.</p>
         </div>
     </div>
-    <div class="header-section">
-        <h1>ORÇAMENTO</h1>
-    </div>
+   
     <div id="orcamento">
+        <div class="header-section">
+            <h1>ORÇAMENTO</h1>
+        </div>
 
+        <form id="form-orcamento">
+
+            <div class="form-group" id="nome-group">
+                <label class="label" for="name">Nome: </label>
+                <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+            <div class="form-group" id="cpf-group">
+                <label class="label" for="cpf">CPF: </label>
+                <input class="input" type="text" id="cpf" name="cpf" placeholder="Ex: 123.456.789-10" required>
+            </div>
+
+
+            <div class="form-group">
+                <label class="label" for="empresa">Empresa: </label>
+                <input class="input" type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="cnpj">CNPJ: </label>
+                <input class="input" type="text" id="cnpj" name="cnpj" placeholder="Ex: XX.XXX.XXX/0001-XX" required>
+            </div>
+
+
+            <div class="form-group">
+                <label class="label" for="telefone">Celular: </label>
+                <input class="input" type="text" id="telefone" name="telefone" placeholder="Ex: (00) 00000-0000" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="email">E-mail: </label>
+                <input class="input" type="text" id="email" name="email" placeholder="Ex: exemplo.email@gmail.com" required>
+            </div>
+
+
+            <div class="form-group">
+                <label class="label" for="cep">CEP: </label>
+                <input class="input" type="text" id="cep" name="cep" placeholder="Ex: 00000-000" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="uf">UF: </label>
+                <input class="input" type="text" id="uf" name="uf" placeholder="XX" required>
+            </div>
+
+
+            <div class="form-group" id="log-group">
+                <label class="label" for="logradouro">Logradouro: </label>
+                <input class="input" type="text" id="log" name="logradouro" placeholder="Digite seu endereço" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="cidade">Cidade: </label>
+                <input class="input" type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="bairro">Bairro: </label>
+                <input class="input" type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" required>
+            </div>
+            <div class="form-group" id="msg-group">
+                <label class="label" for="mensagem">Mensagem: </label>
+                <input class="input" type="text" id="mensagem" name="mensagem" placeholder="Digite aqui a quantidade desejada e alguma observação ou pergunta que queira fazer" required>
+            </div>
+            <div type="submit" class="botao" id="form-button"><h2>ENVIAR</h2></div>
+        </form>
     </div>
     <div id="contato">
         <h1>CONTATE-NOS</h1>
     </div>
 
 </body>
+<script src="function-fotos.js"></script>
+<script src="emailJS.js"></script>
 </html>
