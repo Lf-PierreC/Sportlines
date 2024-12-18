@@ -34,7 +34,6 @@ a {
 p {
     font-family: 'arial unicode';
     font-size: 30px;
-  
 }
 
 h1{
@@ -73,15 +72,18 @@ h2{
 
 .navbar {
     display: flex;
+    position: absolute;
     justify-content: space-between;
     align-items: center;
     height: 85px;
+    width: 100%;
 }
 
 .menu {
     list-style: none;
     display: flex;
     margin: auto;
+    max-width: 100%;
 }
 
 .menu li{
@@ -114,6 +116,10 @@ header{
     z-index: 3;
     background-color: white;
     box-shadow: 10px 2px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+#menu-icone {
+    display: none;
 }
 
 #logo-lateral{
@@ -204,16 +210,18 @@ header{
 /* SOBRE NOS */
 
 #sobre {
-    width: 100%;
+    max-width: 100%;
     height: 450px;
     display: grid;
     grid-template-columns: 50% 50%;
+    margin: auto;
 }
 
 #texto-sobre {
-    padding-left: 100px;
+    margin-left: 100px;
     margin-top: 20px;
     grid-column: 1;
+    grid-row: 1;
 }
 
 #texto-sobre p {
@@ -229,8 +237,8 @@ header{
 }
 
 #logo-principal {
-    max-width: 55%;
-    max-height: 55%; 
+    max-width: 300px;
+    max-height: 300px; 
 }
 
 /* MARCADOR */
@@ -333,6 +341,7 @@ header{
     text-align: justify;
     margin: 50px;
     margin-top: 140px;
+    font-size: 18pt;
 }
 
 /* ORÇAMENTO */
@@ -402,10 +411,14 @@ header{
     padding-left: 10px;
 }
 
+button.botao {
+    border: none;
+}
+
 /* CONTATE-NOS */
 
 #contato {
-    width: 100%;
+    max-width: 100%;
     background-color: #005C53;
     height: 600px;
     padding-top: 70px;
@@ -415,4 +428,60 @@ header{
 #contato h1 {
     text-align: center;
     color: white;
+    margin-bottom: 100px;
+}
+
+#contato p{
+    color: white;
+    text-align: center;
+}
+
+#contato-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#contato-icones {
+    border-right: solid 1px white;
+    padding-bottom: 50px;
+}
+
+#contato-icones svg{
+    display: block;
+    width: 80px;
+    height: 80px;
+    fill: white;
+    margin-left: 80%;
+    margin-top: 50px;
+}
+
+
+#contato-escrita p{
+    display: block;
+    max-width: 100%;
+    fill: white;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 75px;
+    padding-left: 100px;
+}
+
+/* SPAM WHATSAPP */
+#spam-whatsapp {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    z-index: 4;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 20px;
+    fill: white;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#spam-whatsapp a{
+    fill: white;
 }

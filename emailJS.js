@@ -31,5 +31,5 @@ function enviarFormulario(event) {
         });
 }
 
-// Adiciona o evento de envio ao botão do formulário
+
 document.querySelector("form").addEventListener("submit", enviarFormulario);

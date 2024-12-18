@@ -1,0 +1,508 @@
+@media(max-width: 480px) {
+    @font-face {
+        font-family: 'arial unicode';
+        src: url(fontes/arial-unicode-ms.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Bahnschrift';
+        src: url(fontes/BAHNSCHRIFT.TTF);
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body{
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #a-botao{
+        color: white;
+    }
+    
+    p {
+        font-family: 'arial unicode';
+        font-size: 30px;
+    }
+    
+    h1{
+        font-family: 'Bahnschrift';
+        font-size: 40px;
+       
+    }
+    
+    h2{
+        font-family: 'Bahnschrift';
+        font-size: 40px;
+       
+    }
+    
+    .header-section {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+        border-bottom: 2px solid rgb(177, 177, 177);
+        text-align: center;
+    }
+    
+    .header-section h1 {
+        color: black;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        font-size: 35px;
+    }
+    
+    /* MENU */
+    
+    #home-icon {
+        position: absolute;
+        margin: 20px;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh; 
+        width: 350px;
+        position: fixed;
+        background-color: white;
+        padding-top: 0px;
+        right: -350px;
+        transition: right 0.3s ease; 
+        box-shadow: -8px 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar.open {
+        right: 0; 
+    }
+
+    .menu {
+        list-style: none;
+        display: block;
+        margin-right: auto;
+        padding-left: 0px;
+        z-index: -1;
+    }
+    
+    .menu li{
+        font-family: 'Bahnschrift';
+        color: black;
+        padding: 15px 30px 15px 30px;
+        display: flex;
+        font-size: 15pt;
+        cursor: pointer;
+        border-radius: 40px;
+    }
+    
+    .menu li:hover{
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 40px;
+        transition: 0.5s;
+    }
+    
+    .menu li:not(:hover){
+        transition: 0.5s;
+    }
+    
+    /* HEADER */
+    
+    header{
+        top: 0;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        z-index: 3;
+        background-color: white;
+        box-shadow: 10px 2px 10px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+    }
+    
+    #menu-icone {
+        display: flex;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        margin-top: 20px;
+        z-index: 4;
+    }
+
+    #menu-icone svg{
+        width: 40px;
+    }
+
+    #logo-lateral{
+        width: 200px;
+        position: flex;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    
+    /* HOME */
+    
+    #home {
+        width: 100%;
+        height: 400px;
+        background-color: #005C53;
+        position: relative;
+    }
+    
+    
+    #foto-home {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    #foto-01{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.2;
+    }
+    
+    /* CONTEUDO HOME */
+    
+    #conteudo-home {
+        position: relative;
+        display: flex;
+        margin-top: 80px;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+        z-index: 2;
+        text-align: center;
+    }
+    
+    #conteudo-home p {
+        color: white;
+        font-size: 15pt;
+        margin-top: 100px;
+        display: none;
+    }
+    
+    #conteudo-home h1 {
+        color: white;
+        font-size: 40px;
+        margin-top: 40px;
+    }
+    
+    .botao {
+        height: 50px;
+        width: 250px;
+        background-color: #73d31a;
+        color: white;
+        border-radius: 10px; 
+        cursor: pointer;
+        margin: 20px auto;
+        padding: 10px auto;
+        display: flex;           
+        justify-content: center;
+        align-items: center; 
+        box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .botao:hover {
+        background-color: #2b5306;
+        transition: 0.2s;
+    }
+    
+    .botao:not(:hover) {
+        transition: 0.2s;
+    }
+    
+    .botao h2 {
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    /* SOBRE NOS */
+    
+    #sobre {
+        width: 100%;
+        height: 750px;
+        display: block;
+    }
+    
+    #texto-sobre {
+        padding: 30px;
+        text-align: justify;
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    #texto-sobre p {
+        font-size: 18px;
+    }
+    
+    
+    #logo-principal-container {
+        display: flex;
+        padding-top: 5%;
+    }
+    
+    #logo-principal {
+        max-width: 300px;
+    }
+    
+    /* MARCADOR */
+    
+    #section-marcador {
+        width: 100%;
+        padding-bottom: 20px;
+        height: 1150px;
+        background-color: #5E4A33;
+    }
+    
+    
+    #section-marcador h1 {
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+    }
+    
+    #carousel-marcador {
+        width: 100%;
+        height: 500px;
+        margin-top: 70px;
+        display: flex;
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    #carousel-marcador::-webkit-scrollbar {
+        height: 15px; /* Altura da barra de rolagem horizontal */
+    }
+    
+    #carousel-marcador::-webkit-scrollbar-track {
+        background-color: #D8D3CD; /* Cor do trilho da barra */
+    }
+    
+    #carousel-marcador::-webkit-scrollbar-thumb {
+        background-color: #2B7C74; /* Cor do polegar */
+    }
+    
+    #carousel-marcador::-webkit-scrollbar-thumb:hover {
+        background-color: #005C53; /* Cor ao passar o mouse */
+    }
+    
+    .modal {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); 
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal #modalImage{
+        width: 70%;
+        height: 40%;
+        border-radius: 10px;
+    }
+    
+    .modal .close {
+        position: absolute;
+        top: 330px;
+        right: 85px;
+        font-size: 40px;
+        fill: white;
+        cursor: pointer;
+    }
+    
+    .close:hover {
+        fill: red;
+    }
+    
+    .foto {
+        width: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+    
+    .foto:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    
+    .seta-direita {
+        margin: 20px;
+        cursor: pointer;
+    }
+    
+    .seta-esquerda {
+        margin: 20px;
+        cursor: pointer;
+    }
+    
+    #descricao p{
+        color: white;
+        text-align: justify;
+        margin: 30px;
+        margin-top: 80px;
+        font-size: 12pt;
+    }
+    
+    /* ORÇAMENTO */
+    
+    #orcamento {
+        padding-bottom: 100px;
+        background-color: #dddddd;
+    }
+    
+    #form-orcamento {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1;
+        gap: 0px;
+        row-gap: 20px;
+    }
+    
+    #form-group{
+        display: flex;
+        grid-column: 1;
+    }
+    
+    #nome-group {
+        grid-column: 1;
+    }
+    
+    #cpf-group {
+        grid-column: 1;
+    }
+
+    
+    #log-group {
+        grid-column: 1;
+    }
+    
+    #msg-group {
+        grid-column: 1;
+    }
+    
+    #msg-group input {
+        height: 100px;
+    }
+    
+    #form-button {
+        grid-column: 1;
+    }
+    
+    .label {
+        font-family: 'arial unicode';
+        color: rgb(134, 134, 134);
+        font-size: 20px;
+        display: block;
+        padding-bottom: 10px;
+    }
+    
+    .input {
+        background-color: white;
+        border: 2px solid rgb(177, 177, 177);
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+    }
+    
+    .input::placeholder {
+        font-family: 'arial unicode';
+        color: rgb(177, 177, 177);
+        padding-left: 10px;
+    }
+    
+    button.botao {
+        border: none;
+    }
+    
+    /* CONTATE-NOS */
+    
+    #contato {
+        max-width: 100%;
+        background-color: #005C53;
+        height: 600px;
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    
+    #contato h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 80px;
+    }
+    
+    
+    #contato-grid {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        width: 100%;
+    }
+    
+    #contato-icones {
+        border-right: solid 1px white;
+        padding-bottom: 40px;
+    }
+    
+    #contato-icones svg{
+        display: flex;
+        width: 70px;
+        height: 70px;
+        fill: white;
+        margin: auto;
+        margin-top: 40px;
+    }
+    
+    
+    #contato-escrita p{
+        font-size: 20px;
+        display: block;
+        max-width: 100%;
+        fill: white;
+        text-align: left;
+        margin: auto;
+        margin-top: 65px;
+        padding-left: 30px;
+    }
+    
+    /* SPAM WHATSAPP */
+    #spam-whatsapp {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        z-index: 4;
+        background-color: #25D366;
+        border-radius: 50%;
+        padding: 20px;
+        fill: white;
+        right: 20px;
+        bottom: 20px;
+        box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    
+    #spam-whatsapp a{
+        fill: white;
+    }
+
+}
