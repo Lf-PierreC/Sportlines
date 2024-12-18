@@ -198,8 +198,11 @@
     
     #conteudo-home h1 {
         color: white;
-        font-size: 40px;
+        font-size: 30px;
+        padding: 40px;
+        padding-bottom: 20px;
         margin-top: 40px;
+
     }
     
     .botao {
@@ -442,6 +445,7 @@
         max-width: 100%;
         background-color: #005C53;
         height: 600px;
+        padding: 50px;
         padding-top: 70px;
         padding-bottom: 100px;
     }
@@ -460,7 +464,7 @@
     }
     
     #contato-icones {
-        border-right: solid 1px white;
+        border-right: solid 0px white;
         padding-bottom: 40px;
     }
     
@@ -482,18 +486,18 @@
         text-align: left;
         margin: auto;
         margin-top: 65px;
-        padding-left: 30px;
+        padding-left: 0px;
     }
     
     /* SPAM WHATSAPP */
     #spam-whatsapp {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         position: fixed;
         z-index: 4;
         background-color: #25D366;
         border-radius: 50%;
-        padding: 20px;
+        padding: 15px;
         fill: white;
         right: 20px;
         bottom: 20px;
