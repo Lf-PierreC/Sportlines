@@ -451,7 +451,7 @@
         max-width: 100%;
         background-color: #005C53;
         height: 600px;
-        padding: 50px;
+        padding: auto;
         padding-top: 70px;
         padding-bottom: 100px;
     }
@@ -465,7 +465,7 @@
     
     #contato-grid {
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 35% 65%;
         width: 100%;
     }
     
@@ -476,11 +476,12 @@
     
     #contato-icones svg{
         display: flex;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         fill: white;
-        margin: auto;
+        margin-right: auto;
         margin-top: 40px;
+        padding-right: 20px;
     }
     
     
@@ -491,8 +492,8 @@
         fill: white;
         text-align: left;
         margin: auto;
-        margin-top: 50px;
-        padding-left: 0px;
+        margin-top: 65px;
+        padding-left: 20px;
     }
     
     /* SPAM WHATSAPP */
